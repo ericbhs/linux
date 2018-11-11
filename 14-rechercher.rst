@@ -31,6 +31,12 @@ Rechercher des fichiers
 
 ``find -name "*.jpg" -delete``
     supprime tous les fichiers .jpg (dangereux !!!)
+    
+``find -path '*/*(flac)/*' -delete``
+    supprime le contenu de tous les dossiers dont le nom contient ``(flac)``
+    
+``find -type d -name '*(flac)' -empty -delete``
+    supprime les dossiers eux-même (pas possible de supprimer les fichiers et les dossiers en une commande)
 
 ``find -name ".jpg" -exec cmd {} \;``
     exécute la commande cmd avec les résultats. La commande doit finir par un ``\;`` obligatoirement

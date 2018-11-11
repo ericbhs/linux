@@ -58,6 +58,10 @@
 <dd>only files</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-name</span> <span class="pre">&quot;*.jpg&quot;</span> <span class="pre">-delete</span></code></dt>
 <dd>supprime tous les fichiers .jpg (dangereux !!!)</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-path</span> <span class="pre">'*/*(flac)/*'</span> <span class="pre">-delete</span></code></dt>
+<dd>supprime le contenu de tous les dossiers dont le nom contient <code class="docutils literal notranslate"><span class="pre">(flac)</span></code></dd>
+<dt><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-name</span> <span class="pre">'*(flac)'</span> <span class="pre">-empty</span> <span class="pre">-delete</span></code></dt>
+<dd>supprime les dossiers eux-même (pas possible de supprimer les fichiers et les dossiers en une commande)</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-name</span> <span class="pre">&quot;.jpg&quot;</span> <span class="pre">-exec</span> <span class="pre">cmd</span> <span class="pre">{}</span> <span class="pre">\;</span></code></dt>
 <dd>exécute la commande cmd avec les résultats. La commande doit finir par un <code class="docutils literal notranslate"><span class="pre">\;</span></code> obligatoirement</dd>
 </dl>
