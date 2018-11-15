@@ -29,6 +29,14 @@ Extraire, trier et filtrer des données
         * ``+`` : L'élément précédent doit être présent 1 ou plusieurs fois
         * ``|`` : Ou
         * ``()`` : Groupement d'expressions
+		
+``grep -r -i --include=\*.txt 'searchterm' ./``
+	* ``-r`` recursively
+	* ``-i`` ignore-case
+	* ``--include`` all ``*.txt``: text files (escape with \ just in case you have a directory with asterisks in the filenames)
+	* ``'searchterm'`` What to search
+	* ``./`` Start at current directory.
+
 
 ``sort fichier``
     trier le contenu d'un fichier
