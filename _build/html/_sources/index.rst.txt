@@ -31,7 +31,7 @@ Résumé du cours de Linux (Open Class Room)
     20-vim
     21-scripts-shell
     22-folders
-
+	23-windows10
 
 
 Indices and tables
