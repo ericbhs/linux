@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Exécuter un programme à une heure différée &#8212; Documentation Linux_OpenClassRoom </title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -13,8 +11,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Extraire, trier et filtrer des données" href="08-trier.html" />
@@ -37,51 +35,49 @@
             
   <div class="section" id="executer-un-programme-a-une-heure-differee">
 <h1>Exécuter un programme à une heure différée<a class="headerlink" href="#executer-un-programme-a-une-heure-differee" title="Lien permanent vers ce titre">¶</a></h1>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">date</span></code></dt>
-<dd>afficher / régler l’heure</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">HH:MM</span></code></dt>
-<dd>donne la possibilité de démarrer un programme à HH:MM. Un promppt aparait pour demander lequel.</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">date</span></code></dt><dd><p>afficher / régler l’heure</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">HH:MM</span></code></dt><dd><p>donne la possibilité de démarrer un programme à HH:MM. Un promppt aparait pour demander lequel.</p>
+</dd>
 </dl>
 <p><code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">HH:MM</span> <span class="pre">tomorrow</span></code></p>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">HH:MM</span> <span class="pre">11/15/10</span></code></dt>
-<dd>attention date au format américain</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">HH:MM</span> <span class="pre">11/15/10</span></code></dt><dd><p>attention date au format américain</p>
+</dd>
 </dl>
 <p><code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">now</span> <span class="pre">+5</span> <span class="pre">minutes</span></code></p>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">atq</span></code></dt>
-<dd>afficher les jobs en attente -&gt; donne un n°</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">atrm</span> <span class="pre">x</span></code></dt>
-<dd>supprimer un job en attente dont le numéro est x</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">sleep</span> <span class="pre">x</span></code></dt>
-<dd>attend x secondes (minute : xm, heure : xh, jour : xd)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;export</span> <span class="pre">EDITOR=nano&quot;</span> <span class="pre">&gt;&gt;</span>&#160; <span class="pre">~/.bashrc</span></code></dt>
-<dd>faire de Nano l’éditeur par défaut</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">crontab</span> <span class="pre">-e</span></code></dt>
-<dd>modifier la crontab</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">crontab</span> <span class="pre">-l</span></code></dt>
-<dd>afficher la crontab</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">crontab</span> <span class="pre">-r</span></code></dt>
-<dd>supprimer la crontab (immédiate et sans confirmation)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">m</span>&#160;&#160;&#160;&#160; <span class="pre">h</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">dom</span>&#160;&#160;&#160;&#160; <span class="pre">mon</span>&#160;&#160;&#160;&#160; <span class="pre">dow</span>&#160;&#160;&#160;&#160; <span class="pre">command</span></code></dt>
-<dd><ul class="first simple">
-<li><code class="docutils literal notranslate"><span class="pre">m</span></code> : minutes (0 - 59)</li>
-<li><code class="docutils literal notranslate"><span class="pre">h</span></code> : heures (0 - 23)</li>
-<li><code class="docutils literal notranslate"><span class="pre">dom</span></code> (day of month) : jour du mois (1 - 31)</li>
-<li><code class="docutils literal notranslate"><span class="pre">mon</span></code> (month) : mois (1 - 12) ;</li>
-<li><code class="docutils literal notranslate"><span class="pre">dow</span></code> (day of week) : jour de la semaine (0 - 6, 0 étant le dimanche) ;</li>
-<li><code class="docutils literal notranslate"><span class="pre">command</span></code> : c’est la commande à exécuter.</li>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">atq</span></code></dt><dd><p>afficher les jobs en attente -&gt; donne un n°</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">atrm</span> <span class="pre">x</span></code></dt><dd><p>supprimer un job en attente dont le numéro est x</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">sleep</span> <span class="pre">x</span></code></dt><dd><p>attend x secondes (minute : xm, heure : xh, jour : xd)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;export</span> <span class="pre">EDITOR=nano&quot;</span> <span class="pre">&gt;&gt;</span>&#160; <span class="pre">~/.bashrc</span></code></dt><dd><p>faire de Nano l’éditeur par défaut</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">crontab</span> <span class="pre">-e</span></code></dt><dd><p>modifier la crontab</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">crontab</span> <span class="pre">-l</span></code></dt><dd><p>afficher la crontab</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">crontab</span> <span class="pre">-r</span></code></dt><dd><p>supprimer la crontab (immédiate et sans confirmation)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">m</span>&#160;&#160;&#160;&#160; <span class="pre">h</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">dom</span>&#160;&#160;&#160;&#160; <span class="pre">mon</span>&#160;&#160;&#160;&#160; <span class="pre">dow</span>&#160;&#160;&#160;&#160; <span class="pre">command</span></code></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code> : minutes (0 - 59)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code> : heures (0 - 23)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dom</span></code> (day of month) : jour du mois (1 - 31)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mon</span></code> (month) : mois (1 - 12) ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dow</span></code> (day of week) : jour de la semaine (0 - 6, 0 étant le dimanche) ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">command</span></code> : c’est la commande à exécuter.</p></li>
 </ul>
 <p>ex : <code class="docutils literal notranslate"><span class="pre">47</span> <span class="pre">15</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">touch</span> <span class="pre">/home/mateo21/fichier.txt</span></code> -&gt; tous les jours à 15h47</p>
-<dl class="last docutils">
-<dt>Pour chaque champ, on a le droit à différentes notations :</dt>
-<dd><ul class="first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">5</span></code> (un nombre) : exécuté lorsque le champ prend la valeur 5</li>
-<li><code class="docutils literal notranslate"><span class="pre">*</span></code> : exécuté tout le temps (toutes les valeurs sont bonnes) ;</li>
-<li><code class="docutils literal notranslate"><span class="pre">3,5,10</span></code> : exécuté lorsque le champ prend la valeur 3, 5 ou 10. Ne pas mettre d’espace après la virgule ;</li>
-<li><code class="docutils literal notranslate"><span class="pre">3-7</span></code> : exécuté pour les valeurs 3 à 7 ;</li>
-<li><code class="docutils literal notranslate"><span class="pre">*/3</span></code> : exécuté tous les multiples de 3 (par exemple à 0 h, 3 h, 6 h, 9 h…).</li>
+<dl class="simple">
+<dt>Pour chaque champ, on a le droit à différentes notations :</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> (un nombre) : exécuté lorsque le champ prend la valeur 5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> : exécuté tout le temps (toutes les valeurs sont bonnes) ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3,5,10</span></code> : exécuté lorsque le champ prend la valeur 3, 5 ou 10. Ne pas mettre d’espace après la virgule ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3-7</span></code> : exécuté pour les valeurs 3 à 7 ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*/3</span></code> : exécuté tous les multiples de 3 (par exemple à 0 h, 3 h, 6 h, 9 h…).</p></li>
 </ul>
 </dd>
 </dl>
@@ -129,6 +125,7 @@
 <li class="toctree-l1"><a class="reference internal" href="20-vim.html">VIM : éditeur de texte avancé</a></li>
 <li class="toctree-l1"><a class="reference internal" href="21-scripts-shell.html">Scripts Shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22-folders.html">System Folders in Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23-windows10.html">Linux in WIndows 10</a></li>
 </ul>
 
 <div class="relations">
@@ -141,13 +138,11 @@
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -168,7 +163,7 @@
       &copy;2018, Eric.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

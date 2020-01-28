@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>VIM : éditeur de texte avancé &#8212; Documentation Linux_OpenClassRoom </title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -13,8 +11,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Scripts Shell" href="21-scripts-shell.html" />
@@ -37,39 +35,39 @@
             
   <div class="section" id="vim-editeur-de-texte-avance">
 <h1>VIM : éditeur de texte avancé<a class="headerlink" href="#vim-editeur-de-texte-avance" title="Lien permanent vers ce titre">¶</a></h1>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">vim</span></code></dt>
-<dd>lancer vim</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">vimtutor</span></code></dt>
-<dd>lancer le tutoriel vim</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">vim</span></code></dt><dd><p>lancer vim</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">vimtutor</span></code></dt><dd><p>lancer le tutoriel vim</p>
+</dd>
 </dl>
 <div class="section" id="modes-de-vim">
 <h2>Modes de VIM<a class="headerlink" href="#modes-de-vim" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><strong>Mode interactif</strong> : par défaut. Permet de se déplacer dans le texte, de supprimer une ligne, copier-coller du texte, rejoindre une ligne précise, annuler ses actions, etc</li>
-<li><strong>Mode insertion</strong> : appuyer sur <code class="docutils literal notranslate"><span class="pre">i</span></code> pour y entrer</li>
-<li><strong>Mode commande</strong> : l’activer en tapant <code class="docutils literal notranslate"><span class="pre">:</span></code></li>
+<li><p><strong>Mode interactif</strong> : par défaut. Permet de se déplacer dans le texte, de supprimer une ligne, copier-coller du texte, rejoindre une ligne précise, annuler ses actions, etc</p></li>
+<li><p><strong>Mode insertion</strong> : appuyer sur <code class="docutils literal notranslate"><span class="pre">i</span></code> pour y entrer</p></li>
+<li><p><strong>Mode commande</strong> : l’activer en tapant <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
 </ul>
 </div></blockquote>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="31%" />
-<col width="69%" />
+<col style="width: 31%" />
+<col style="width: 69%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Racourcis</th>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Racourcis</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">i</span></code></td>
-<td><div class="first last line-block">
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">i</span></code></p></td>
+<td><div class="line-block">
 <div class="line">insérer du texte</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ESC</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ESC</span></code></p></td>
+<td><div class="line-block">
 <div class="line">sortir du mode insertion</div>
 </div>
 </td>
@@ -79,30 +77,30 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Commandes</th>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Commandes</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:w</span></code></td>
-<td><div class="first last line-block">
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:w</span></code></p></td>
+<td><div class="line-block">
 <div class="line">enregistrer le fichier (write)</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:q</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:q</span></code></p></td>
+<td><div class="line-block">
 <div class="line">quitter</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:wq</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:wq</span></code></p></td>
+<td><div class="line-block">
 <div class="line">enregistrer puis quitter</div>
 </div>
 </td>
@@ -112,54 +110,54 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="26%" />
-<col width="74%" />
+<col style="width: 26%" />
+<col style="width: 74%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Déplacements</th>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Déplacements</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">h</span></code></td>
-<td><div class="first last line-block">
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">h</span></code></p></td>
+<td><div class="line-block">
 <div class="line">gauche</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">j</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">j</span></code></p></td>
+<td><div class="line-block">
 <div class="line">bas</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">k</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">k</span></code></p></td>
+<td><div class="line-block">
 <div class="line">haut</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">l</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">l</span></code></p></td>
+<td><div class="line-block">
 <div class="line">droite</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">0</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><div class="line-block">
 <div class="line">aller en début de ligne (origin)</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">$</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">$</span></code></p></td>
+<td><div class="line-block">
 <div class="line">aller en fin de ligne</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">w</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">w</span></code></p></td>
+<td><div class="line-block">
 <div class="line">se déplacer de mot en mot (word)</div>
 </div>
 </td>
@@ -176,78 +174,78 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="20%" />
-<col width="80%" />
+<col style="width: 20%" />
+<col style="width: 80%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Opérations standards</th>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Opérations standards</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">x</span></code></td>
-<td><div class="first last line-block">
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">x</span></code></p></td>
+<td><div class="line-block">
 <div class="line">effacer des lettres en mode interactif</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">(nb)x</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(nb)x</span></code></p></td>
+<td><div class="line-block">
 <div class="line">effacer nb lettres</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">dw</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dw</span></code></p></td>
+<td><div class="line-block">
 <div class="line">effacer un mot</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">dd</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dd</span></code></p></td>
+<td><div class="line-block">
 <div class="line">effacer une ligne</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">d0</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">d0</span></code></p></td>
+<td><div class="line-block">
 <div class="line">supprimer du curseur au début de la ligne</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">d$</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">d$</span></code></p></td>
+<td><div class="line-block">
 <div class="line">supprimer du curseur à la fin de la ligne</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">yy</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">yy</span></code></p></td>
+<td><div class="line-block">
 <div class="line">copier une ligne en mémoire</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">p</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><div class="line-block">
 <div class="line">coller (coller plusieurs fois : ex : 8p -&gt; 8x)</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">r</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">r</span></code></p></td>
+<td><div class="line-block">
 <div class="line">remplacer une lettre</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">u</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">u</span></code></p></td>
+<td><div class="line-block">
 <div class="line">annuler des modifications</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">G</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">G</span></code></p></td>
+<td><div class="line-block">
 <div class="line">aller à la ligne x (Go)</div>
 </div>
 </td>
@@ -257,56 +255,56 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="23%" />
-<col width="77%" />
+<col style="width: 23%" />
+<col style="width: 77%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Opérations avancées</th>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Opérations avancées</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/</span></code></td>
-<td><div class="first last line-block">
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td><div class="line-block">
 <div class="line">passer en mode recherche (pour chercher un mot par ex)</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">n</span></code>   aller à la prochaine occurence</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">N</span></code>   aller à la précédente occurence</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:s/ancien/nouveau</span></code></td>
-<td><div class="first last line-block">
-<div class="line">remplacer le mot «&nbsp;ancien&nbsp;» par le mot «&nbsp;nouveau&nbsp;» :</div>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:s/ancien/nouveau</span></code></p></td>
+<td><div class="line-block">
+<div class="line">remplacer le mot « ancien » par le mot « nouveau » :</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:s/ancien/nouveau</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:s/ancien/nouveau</span></code></p></td>
+<td><div class="line-block">
 <div class="line">remplace la première occurrence de la ligne où se trouve le curseur ;</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:s/ancien/nouveau/g</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:s/ancien/nouveau/g</span></code></p></td>
+<td><div class="line-block">
 <div class="line">remplace toutes les occurrences de la ligne où se trouve le curseur ;</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:#,#s/ancien/nouveau/g</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:#,#s/ancien/nouveau/g</span></code></p></td>
+<td><div class="line-block">
 <div class="line">remplace toutes les occurrences dans les lignes n° # à # du fichier ;</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:%s/ancien/nouveau/g</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:%s/ancien/nouveau/g</span></code></p></td>
+<td><div class="line-block">
 <div class="line">remplace toutes les occurrences dans tout le fichier. C’est peut-être ce que vous utiliserez le plus fréquemment.</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:r</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:r</span></code></p></td>
+<td><div class="line-block">
 <div class="line">fusion de fichiers : insérer le contenu d’un fichier au curseur</div>
 </div>
 </td>
@@ -316,72 +314,72 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="15%" />
-<col width="85%" />
+<col style="width: 15%" />
+<col style="width: 85%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Splitter écrans (viewports)</th>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Splitter écrans (viewports)</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:sp</span></code></td>
-<td><div class="first last line-block">
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:sp</span></code></p></td>
+<td><div class="line-block">
 <div class="line">découper l’écran horizontalement</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:sp</span> <span class="pre">autrefichier</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:sp</span> <span class="pre">autrefichier</span></code></p></td>
+<td><div class="line-block">
 <div class="line">ouvrir autrefichier dans la seconde moitié de l’écran</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:vsp</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:vsp</span></code></p></td>
+<td><div class="line-block">
 <div class="line">découper l’écran verticalement</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">``w</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">``w</span></code></p></td>
+<td><div class="line-block">
 <div class="line">navigue de viewport en viewport. Répétez l’opération plusieurs fois pour accéder au viewport désiré.</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">j</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">j</span></code></p></td>
+<td><div class="line-block">
 <div class="line">déplace le curseur pour aller au viewport juste en dessous. La même chose fonctionne avec les touches <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code> et <code class="docutils literal notranslate"><span class="pre">l</span></code> que l’on utilise traditionnellement pour se déplacer dans Vim.</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">+</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><div class="line-block">
 <div class="line">agrandit le viewport actuel.</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">-</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><div class="line-block">
 <div class="line">réduit le viewport actuel.</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">=</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+<td><div class="line-block">
 <div class="line">égalise à nouveau la taille des viewports.</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">r</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">r</span></code></p></td>
+<td><div class="line-block">
 <div class="line">échange la position des viewports. Fonctionne aussi avec « R » majuscule pour échanger en sens inverse.</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">q</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">w</span></code> puis <code class="docutils literal notranslate"><span class="pre">q</span></code></p></td>
+<td><div class="line-block">
 <div class="line">ferme le viewport actuel.</div>
 </div>
 </td>
@@ -391,24 +389,24 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="52%" />
-<col width="48%" />
+<col style="width: 52%" />
+<col style="width: 48%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Zoom</th>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Zoom</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">+</span></code></td>
-<td><div class="first last line-block">
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><div class="line-block">
 <div class="line">zoom</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">-</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><div class="line-block">
 <div class="line">dezoom</div>
 </div>
 </td>
@@ -419,68 +417,68 @@
 <div class="section" id="options-de-vim">
 <h2>Options de vim<a class="headerlink" href="#options-de-vim" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Rem : pour qu’elles soient retenues, créer un fichier .vimrc dans le répertoire personnel (un exemple de fichier se trouve dans /etc/vim -&gt; vimrc)</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="33%" />
-<col width="67%" />
+<col style="width: 33%" />
+<col style="width: 67%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">option</span></code></td>
-<td><div class="first last line-block">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">option</span></code></p></td>
+<td><div class="line-block">
 <div class="line">activer l’option en mode commande</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">nooption</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">nooption</span></code></p></td>
+<td><div class="line-block">
 <div class="line">désactiver l’option en mode commande</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">option?</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">option?</span></code></p></td>
+<td><div class="line-block">
 <div class="line">connaitre l’état d’une option</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">option=valeur</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">option=valeur</span></code></p></td>
+<td><div class="line-block">
 <div class="line">donner une valeur à une option</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">syntax=ON</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">syntax=ON</span></code></p></td>
+<td><div class="line-block">
 <div class="line">coloration synthaxique</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">background=dark</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">background=dark</span></code></p></td>
+<td><div class="line-block">
 <div class="line">coloration adaptée pour les fonds noirs</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">number</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">number</span></code></p></td>
+<td><div class="line-block">
 <div class="line">affiche les n° de lignes</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">showcmd</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">showcmd</span></code></p></td>
+<td><div class="line-block">
 <div class="line">afficher la commande en cours</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">ignorecase</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">ignorecase</span></code></p></td>
+<td><div class="line-block">
 <div class="line">ignorer la casse lors des recherches</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">mouse=a</span></code></td>
-<td><div class="first last line-block">
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">:set</span> <span class="pre">mouse=a</span></code></p></td>
+<td><div class="line-block">
 <div class="line">activer la souris</div>
 </div>
 </td>
@@ -492,7 +490,7 @@
 <h2>Gérer les plugins<a class="headerlink" href="#gerer-les-plugins" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://artisan.karma-lab.net/configurer-vim">https://artisan.karma-lab.net/configurer-vim</a></p>
 <ul class="simple">
-<li>Création d’une arborescence pour les fichiers de config :</li>
+<li><p>Création d’une arborescence pour les fichiers de config :</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span>
 $ mkdir -p .vim/<span class="o">{</span>autoload,colors,syntax,plugin,spell,config<span class="o">}</span>
@@ -502,7 +500,7 @@ $ ln -s .vim/vimrc .vimrc
 </div>
 <p>(on crée un lien vers <code class="docutils literal notranslate"><span class="pre">.vim/vimrc`</span></code>)</p>
 <ul class="simple">
-<li>Installation de <code class="docutils literal notranslate"><span class="pre">pathogen</span></code> :</li>
+<li><p>Installation de <code class="docutils literal notranslate"><span class="pre">pathogen</span></code> :</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/.vim
 $ git clone https://github.com/tpope/vim-pathogen.git pathogen
@@ -511,14 +509,14 @@ $ ln -s ../pathogen/autoload/pathogen.vim
 </pre></div>
 </div>
 <ul class="simple">
-<li>Pour mettre à jour <code class="docutils literal notranslate"><span class="pre">pathogen</span></code> :</li>
+<li><p>Pour mettre à jour <code class="docutils literal notranslate"><span class="pre">pathogen</span></code> :</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/.vim/pathogen
 $ git pull
 </pre></div>
 </div>
 <ul class="simple">
-<li>Installer un plugin : exemple avec <code class="docutils literal notranslate"><span class="pre">NERDTree</span></code></li>
+<li><p>Installer un plugin : exemple avec <code class="docutils literal notranslate"><span class="pre">NERDTree</span></code></p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/.vim
 $ mkdir -p bundle
@@ -527,7 +525,7 @@ $ git clone https://github.com/scrooloose/nerdtree.git nerdtree
 </pre></div>
 </div>
 <ul class="simple">
-<li>Allure finale du dossier <code class="docutils literal notranslate"><span class="pre">.vim</span></code> (situé dans <code class="docutils literal notranslate"><span class="pre">~/</span></code>)</li>
+<li><p>Allure finale du dossier <code class="docutils literal notranslate"><span class="pre">.vim</span></code> (situé dans <code class="docutils literal notranslate"><span class="pre">~/</span></code>)</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.vim
 ├── autoload
@@ -549,7 +547,7 @@ $ git clone https://github.com/scrooloose/nerdtree.git nerdtree
 </pre></div>
 </div>
 <ul class="simple">
-<li>Allure du fichier <code class="docutils literal notranslate"><span class="pre">vimrc</span></code> :</li>
+<li><p>Allure du fichier <code class="docutils literal notranslate"><span class="pre">vimrc</span></code> :</p></li>
 </ul>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1 set nocompatible
 2
@@ -564,7 +562,7 @@ $ git clone https://github.com/scrooloose/nerdtree.git nerdtree
 </pre></div>
 </div>
 <ul class="simple">
-<li>Pour démarrer NerdTree : taper <code class="docutils literal notranslate"><span class="pre">:NERDTree</span></code> en mode interactif</li>
+<li><p>Pour démarrer NerdTree : taper <code class="docutils literal notranslate"><span class="pre">:NERDTree</span></code> en mode interactif</p></li>
 </ul>
 </div>
 </div>
@@ -609,6 +607,7 @@ $ git clone https://github.com/scrooloose/nerdtree.git nerdtree
 <li class="toctree-l1 current"><a class="current reference internal" href="#">VIM : éditeur de texte avancé</a></li>
 <li class="toctree-l1"><a class="reference internal" href="21-scripts-shell.html">Scripts Shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22-folders.html">System Folders in Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23-windows10.html">Linux in WIndows 10</a></li>
 </ul>
 
 <div class="relations">
@@ -621,13 +620,11 @@ $ git clone https://github.com/scrooloose/nerdtree.git nerdtree
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -648,7 +645,7 @@ $ git clone https://github.com/scrooloose/nerdtree.git nerdtree
       &copy;2018, Eric.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

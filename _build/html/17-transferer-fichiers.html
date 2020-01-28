@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Transférer des fichiers &#8212; Documentation Linux_OpenClassRoom </title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -13,8 +11,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Analyser le réseau et filtrer le trafic avec un pare-feu" href="18-pare-feu.html" />
@@ -39,69 +37,67 @@
 <h1>Transférer des fichiers<a class="headerlink" href="#transferer-des-fichiers" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="wget-telecharger-un-fichier-sur-le-web">
 <h2><code class="docutils literal notranslate"><span class="pre">wget</span></code> : télécharger un fichier sur le web<a class="headerlink" href="#wget-telecharger-un-fichier-sur-le-web" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">http://website.com/file</span></code></dt>
-<dd>télécharger un fichier distant</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">http://website.com/file</span></code></dt><dd><p>télécharger un fichier distant</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="scp-copier-coller-un-fichier-par-ssh">
 <h2><code class="docutils literal notranslate"><span class="pre">scp</span></code> : copier/coller un fichier par SSH<a class="headerlink" href="#scp-copier-coller-un-fichier-par-ssh" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">fichier_origine</span> <span class="pre">copie_destination</span></code></dt>
-<dd>permet de copier des fichiers distants de manière sécurisée (cryptage ssh)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">fichier</span> <span class="pre">remoteLogin&#64;85.123.10.201:/home/remoteLogin/dossier/</span></code></dt>
-<dd>copier un fichier de l’ordi local vers le distant</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">remoteLogin&#64;85.123.10.201:fichier</span> <span class="pre">copie_fichier</span></code></dt>
-<dd>pas nécessaire de préciser le nom -&gt; gardera le même nom que le fichier d’origine</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-P</span> <span class="pre">16296</span> <span class="pre">mateo21&#64;85.123.10.201:image.png</span></code></dt>
-<dd>en précisant le port (attention MAJUSCULE)</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">fichier_origine</span> <span class="pre">copie_destination</span></code></dt><dd><p>permet de copier des fichiers distants de manière sécurisée (cryptage ssh)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">fichier</span> <span class="pre">remoteLogin&#64;85.123.10.201:/home/remoteLogin/dossier/</span></code></dt><dd><p>copier un fichier de l’ordi local vers le distant</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">remoteLogin&#64;85.123.10.201:fichier</span> <span class="pre">copie_fichier</span></code></dt><dd><p>pas nécessaire de préciser le nom -&gt; gardera le même nom que le fichier d’origine</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-P</span> <span class="pre">16296</span> <span class="pre">mateo21&#64;85.123.10.201:image.png</span></code></dt><dd><p>en précisant le port (attention MAJUSCULE)</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="protocole-ftp-non-securise">
 <h2>Protocole ftp non sécurisé<a class="headerlink" href="#protocole-ftp-non-securise" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">ftp://ftp.debian.org</span></code></dt>
-<dd><p class="first">connection au serveur ftp de debian (login : anonymous mpd : any)</p>
-<ul class="last simple">
-<li>on a ensuite un prompt qui nous permet de naviguer sur le serveur (<code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">pwd</span></code>…)</li>
-<li><code class="docutils literal notranslate"><span class="pre">put</span></code> : ajouter un fichier sur le serveur (verouillé dans le cas de celui de debian)</li>
-<li><code class="docutils literal notranslate"><span class="pre">get</span></code> : récupérer un fichier depuis le serveur (sera mis dans le dossier courant du pc local)</li>
-<li>pour se déplacer dans le pc local : <code class="docutils literal notranslate"><span class="pre">!cd</span></code>, <code class="docutils literal notranslate"><span class="pre">!ls</span></code>, <code class="docutils literal notranslate"><span class="pre">!pwd</span></code>… (ajouter un ! avant la commande)</li>
-<li>attention : protocole ftp pas sécurisée</li>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">ftp://ftp.debian.org</span></code></dt><dd><p>connection au serveur ftp de debian (login : anonymous mpd : any)</p>
+<ul class="simple">
+<li><p>on a ensuite un prompt qui nous permet de naviguer sur le serveur (<code class="docutils literal notranslate"><span class="pre">ls</span></code>, <code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">pwd</span></code>…)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">put</span></code> : ajouter un fichier sur le serveur (verouillé dans le cas de celui de debian)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get</span></code> : récupérer un fichier depuis le serveur (sera mis dans le dossier courant du pc local)</p></li>
+<li><p>pour se déplacer dans le pc local : <code class="docutils literal notranslate"><span class="pre">!cd</span></code>, <code class="docutils literal notranslate"><span class="pre">!ls</span></code>, <code class="docutils literal notranslate"><span class="pre">!pwd</span></code>… (ajouter un ! avant la commande)</p></li>
+<li><p>attention : protocole ftp pas sécurisée</p></li>
 </ul>
 </dd>
 </dl>
 </div>
 <div class="section" id="protocole-ftp-securise">
 <h2>Protocole ftp sécurisé<a class="headerlink" href="#protocole-ftp-securise" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">sftp</span> <span class="pre">mateo21&#64;lisa.simple-it.fr</span></code></dt>
-<dd>ftp sécurisée avec ssh (port par défaut : 22)</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">sftp</span> <span class="pre">mateo21&#64;lisa.simple-it.fr</span></code></dt><dd><p>ftp sécurisée avec ssh (port par défaut : 22)</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="rsync-sauvegardes-sur-un-serveur-distant">
 <h2><code class="docutils literal notranslate"><span class="pre">rsync</span></code> : sauvegardes sur un serveur distant<a class="headerlink" href="#rsync-sauvegardes-sur-un-serveur-distant" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">rsync</span></code></dt>
-<dd>permet de créer des sauvegardes sur un serveur distant (incrémentielles, etc…)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">Images/</span> <span class="pre">backups/</span></code></dt>
-<dd><p class="first">analyse les différences entre /Images et /backup et fait une sauvegarde</p>
-<ul class="last simple">
-<li><code class="docutils literal notranslate"><span class="pre">-a</span></code> : conserve toutes les informations sur les fichiers, comme les droits (chmod), la date de modification, etc. ;</li>
-<li><code class="docutils literal notranslate"><span class="pre">-r</span></code> : sauvegarde aussi tous les sous-dossiers qui se trouvent dans le dossier à sauvegarder ;</li>
-<li><code class="docutils literal notranslate"><span class="pre">-v</span></code> : mode verbeux, affiche des informations détaillées sur la copie en cours.</li>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">rsync</span></code></dt><dd><p>permet de créer des sauvegardes sur un serveur distant (incrémentielles, etc…)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">Images/</span> <span class="pre">backups/</span></code></dt><dd><p>analyse les différences entre /Images et /backup et fait une sauvegarde</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-a</span></code> : conserve toutes les informations sur les fichiers, comme les droits (chmod), la date de modification, etc. ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-r</span></code> : sauvegarde aussi tous les sous-dossiers qui se trouvent dans le dossier à sauvegarder ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-v</span></code> : mode verbeux, affiche des informations détaillées sur la copie en cours.</p></li>
 </ul>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">Images/</span> <span class="pre">backups/</span></code></dt>
-<dd>analyse les différences entre /Images et /backup et efface les fichiers de backups qui ne sont plus dans /Images</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">--backup</span> <span class="pre">Images/</span> <span class="pre">backups/</span></code></dt>
-<dd>garde les fichiers suprimés en leur ajoutant un suffixe dans le dossier de sauvegarde</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">--backup</span> <span class="pre">--backup-dir=/home/mateo21/backups_supprimes</span> <span class="pre">Images/</span> <span class="pre">backups/</span></code></dt>
-<dd>les fichiers suprimés vont dans le dossier /home/mateo21/backups_supprimes</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">--backup</span> <span class="pre">--backup-dir=/home/mateo21/fichiers_supprimes</span> <span class="pre">Images/</span> <span class="pre">mateo21&#64;IP_du_serveur:mes_backups/</span></code></dt>
-<dd>fait le backup sur un ordinateur distant via ssh</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">--backup</span> <span class="pre">--backup-dir=/home/mateo21/fichiers_supprimes</span> <span class="pre">Images/</span> <span class="pre">mateo21&#64;IP_du_serveur:mes_backups/</span> <span class="pre">-e</span> <span class="pre">&quot;ssh</span> <span class="pre">-p</span> <span class="pre">12473&quot;</span></code></dt>
-<dd>avec un n° de port custom</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">Images/</span> <span class="pre">backups/</span></code></dt><dd><p>analyse les différences entre /Images et /backup et efface les fichiers de backups qui ne sont plus dans /Images</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">--backup</span> <span class="pre">Images/</span> <span class="pre">backups/</span></code></dt><dd><p>garde les fichiers suprimés en leur ajoutant un suffixe dans le dossier de sauvegarde</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">--backup</span> <span class="pre">--backup-dir=/home/mateo21/backups_supprimes</span> <span class="pre">Images/</span> <span class="pre">backups/</span></code></dt><dd><p>les fichiers suprimés vont dans le dossier /home/mateo21/backups_supprimes</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">--backup</span> <span class="pre">--backup-dir=/home/mateo21/fichiers_supprimes</span> <span class="pre">Images/</span> <span class="pre">mateo21&#64;IP_du_serveur:mes_backups/</span></code></dt><dd><p>fait le backup sur un ordinateur distant via ssh</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-arv</span> <span class="pre">--delete</span> <span class="pre">--backup</span> <span class="pre">--backup-dir=/home/mateo21/fichiers_supprimes</span> <span class="pre">Images/</span> <span class="pre">mateo21&#64;IP_du_serveur:mes_backups/</span> <span class="pre">-e</span> <span class="pre">&quot;ssh</span> <span class="pre">-p</span> <span class="pre">12473&quot;</span></code></dt><dd><p>avec un n° de port custom</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -146,6 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="20-vim.html">VIM : éditeur de texte avancé</a></li>
 <li class="toctree-l1"><a class="reference internal" href="21-scripts-shell.html">Scripts Shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22-folders.html">System Folders in Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23-windows10.html">Linux in WIndows 10</a></li>
 </ul>
 
 <div class="relations">
@@ -158,13 +155,11 @@
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -185,7 +180,7 @@
       &copy;2018, Eric.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

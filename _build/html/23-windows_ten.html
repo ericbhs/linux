@@ -1,22 +1,22 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <title>Navigation dans les dossiers &#8212; Documentation Linux_OpenClassRoom </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Linux in WIndows 10 &#8212; Documentation Linux_OpenClassRoom </title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Manipuler les fichiers" href="03-manipuler.html" />
-    <link rel="prev" title="Raccourcis clavier divers" href="01-shortcuts.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -33,29 +33,13 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="navigation-dans-les-dossiers">
-<h1>Navigation dans les dossiers<a class="headerlink" href="#navigation-dans-les-dossiers" title="Lien permanent vers ce titre">¶</a></h1>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">pwd</span></code></dt><dd><p>savoir où je suis</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">cmd</span></code></dt><dd><p>permet de localiser l’emplacement d’une commande cmd</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-F</span></code></dt><dd><p>rajoute à la fin des éléments un symbole pour qu’on puise faire la distinction entre les dossiers, fichiers, raccourcis…</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lh</span></code></dt><dd><p>afficher la taille des éléments (-h : « for humans »)</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">cd</span></code></dt><dd><p>sans arguments, ramène dans home/currentUser/</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">du</span></code></dt><dd><p>pour Disk Usage (utilisation du disque) vous donne des informations sur la taille qu’occupent les dossiers sur votre disque</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-c</span></code></dt><dd><p>produces a grand total</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-hsc</span> <span class="pre">*</span></code></dt><dd><p>This finds the size recursively and puts it next to each folder name, along with total size at the bottom, all in the human format.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-hs</span> <span class="pre">*</span> <span class="pre">|</span> <span class="pre">sort</span> <span class="pre">-h</span></code></dt><dd><p>same as previous but sort by size</p>
-</dd>
-</dl>
-<p><strong>Note</strong> : on the <code class="docutils literal notranslate"><span class="pre">du</span></code> results, <code class="docutils literal notranslate"><span class="pre">/dev/root</span></code> is the disk on which the system is installed</p>
+  <div class="section" id="linux-in-windows-10">
+<h1>Linux in WIndows 10<a class="headerlink" href="#linux-in-windows-10" title="Lien permanent vers ce titre">¶</a></h1>
+<p>To mount a smb shared drive :</p>
+<ul class="simple">
+<li>Create a mount point in <code class="docutils literal notranslate"><span class="pre">/mnt</span></code> : <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">/mnt/shared</span></code></li>
+<li>Mount the drive : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-t</span> <span class="pre">drvfs</span> <span class="pre">'\\10.40.63.20\shared'</span> <span class="pre">/mnt/shared</span></code></li>
+</ul>
 </div>
 
 
@@ -75,9 +59,9 @@
 
 
 <h3>Navigation</h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="01-shortcuts.html">Raccourcis clavier divers</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Navigation dans les dossiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-navigation.html">Navigation dans les dossiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-manipuler.html">Manipuler les fichiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-redirection.html">Les flux de redirection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05-activite.html">Surveiller l’activité du système</a></li>
@@ -98,24 +82,23 @@
 <li class="toctree-l1"><a class="reference internal" href="20-vim.html">VIM : éditeur de texte avancé</a></li>
 <li class="toctree-l1"><a class="reference internal" href="21-scripts-shell.html">Scripts Shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22-folders.html">System Folders in Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="23-windows10.html">Linux in WIndows 10</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="01-shortcuts.html" title="Chapitre précédent">Raccourcis clavier divers</a></li>
-      <li>Next: <a href="03-manipuler.html" title="Chapitre suivant">Manipuler les fichiers</a></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Recherche rapide</h3>
+  <h3>Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -136,11 +119,11 @@
       &copy;2018, Eric.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/02-navigation.rst.txt"
+      <a href="_sources/23-windows_ten.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

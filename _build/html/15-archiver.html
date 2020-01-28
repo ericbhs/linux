@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Archiver et compresser &#8212; Documentation Linux_OpenClassRoom </title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -13,8 +11,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="La connexion sécurisée à distance avec SSH" href="16-ssh.html" />
@@ -38,98 +36,103 @@
   <div class="section" id="archiver-et-compresser">
 <h1>Archiver et compresser<a class="headerlink" href="#archiver-et-compresser" title="Lien permanent vers ce titre">¶</a></h1>
 <p>fichier <code class="docutils literal notranslate"><span class="pre">tar</span></code> : archive permettant de regrouper plusieurs fichiers</p>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">gzip</span></code>/<code class="docutils literal notranslate"><span class="pre">bzip2</span></code> <span class="classifier-delimiter">:</span> <span class="classifier">pour compresser des fichiers (des tar par exemple)</span></dt>
-<dd><ul class="first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">gzip</span></code> : c’est le plus connu et le plus utilisé ;</li>
-<li><code class="docutils literal notranslate"><span class="pre">bzip2</span></code> : il est un peu moins fréquemment utilisé. Il compresse mieux mais plus lentement que <code class="docutils literal notranslate"><span class="pre">gzip</span></code>.</li>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">gzip</span></code>/<code class="docutils literal notranslate"><span class="pre">bzip2</span></code><span class="classifier">pour compresser des fichiers (des tar par exemple)</span></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gzip</span></code> : c’est le plus connu et le plus utilisé ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bzip2</span></code> : il est un peu moins fréquemment utilisé. Il compresse mieux mais plus lentement que <code class="docutils literal notranslate"><span class="pre">gzip</span></code>.</p></li>
 </ul>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-cvf</span> <span class="pre">nom_archive.tar</span> <span class="pre">nom_dossier/</span></code></dt>
-<dd><p class="first">créer une archive</p>
-<blockquote class="last">
+<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-cvf</span> <span class="pre">nom_archive.tar</span> <span class="pre">nom_dossier/</span></code></dt><dd><p>créer une archive</p>
+<blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">-c</span></code> : signifie créer une archive tar</li>
-<li><code class="docutils literal notranslate"><span class="pre">-v</span></code> : signifie afficher le détail des opérations</li>
-<li><code class="docutils literal notranslate"><span class="pre">-f</span></code> : signifie assembler l’archive dans un fichier.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-c</span></code> : signifie créer une archive tar</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-v</span></code> : signifie afficher le détail des opérations</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code> : signifie assembler l’archive dans un fichier.</p></li>
 </ul>
 </div></blockquote>
 </dd>
 </dl>
 <div class="section" id="archiver">
 <h2>Archiver<a class="headerlink" href="#archiver" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-tf</span> <span class="pre">archive.tar</span></code></dt>
-<dd>afficher le contenu de l’archive sans l’extraire</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-rvf</span> <span class="pre">archive.tar</span> <span class="pre">fichier_supplementaire</span></code></dt>
-<dd>ajouter un fichier à l’archive</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-xvf</span> <span class="pre">archive.tar</span></code></dt>
-<dd>extraire les fichiers de l’archive</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-tf</span> <span class="pre">archive.tar</span></code></dt><dd><p>afficher le contenu de l’archive sans l’extraire</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-rvf</span> <span class="pre">archive.tar</span> <span class="pre">fichier_supplementaire</span></code></dt><dd><p>ajouter un fichier à l’archive</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-xvf</span> <span class="pre">archive.tar</span></code></dt><dd><p>extraire les fichiers de l’archive</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="compresser-une-archive">
 <h2>Compresser une archive<a class="headerlink" href="#compresser-une-archive" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">gzip</span> <span class="pre">archive.tar</span></code></dt>
-<dd>compresse l’archive avec gzip -&gt; ajoute un .gz à la fin (archive.tar.gz)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">gunzip</span> <span class="pre">archive.tar.gz</span></code></dt>
-<dd>décompresse l’archive</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">bzip2</span> <span class="pre">archive.tar</span></code></dt>
-<dd>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></dd>
-<dt><code class="docutils literal notranslate"><span class="pre">bunzip2</span> <span class="pre">archive.tar.bz2</span></code></dt>
-<dd>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">gzip</span> <span class="pre">archive.tar</span></code></dt><dd><p>compresse l’archive avec gzip -&gt; ajoute un .gz à la fin (archive.tar.gz)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">gunzip</span> <span class="pre">archive.tar.gz</span></code></dt><dd><p>décompresse l’archive</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">bzip2</span> <span class="pre">archive.tar</span></code></dt><dd><p>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">bunzip2</span> <span class="pre">archive.tar.bz2</span></code></dt><dd><p>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></p>
+</dd>
 </dl>
 </div>
 <div class="section" id="archiver-et-compresser-en-une-commande">
 <h2>Archiver et compresser en une commande<a class="headerlink" href="#archiver-et-compresser-en-une-commande" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-zcvf</span> <span class="pre">archive.tar.gz</span> <span class="pre">tutoriels/</span></code></dt>
-<dd>archive et compresse en une comande (ici avec <code class="docutils literal notranslate"><span class="pre">gzip</span></code>)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-zxvf</span> <span class="pre">archive.tar.gz</span></code></dt>
-<dd>décompresse et désarchive en une commande</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-jcvf</span> <span class="pre">tutoriels.tar.bz2</span> <span class="pre">tutoriels/</span></code></dt>
-<dd>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-jxvf</span> <span class="pre">tutoriels.tar.bz2</span> <span class="pre">tutoriels/</span></code></dt>
-<dd>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-zcvf</span> <span class="pre">archive.tar.gz</span> <span class="pre">tutoriels/</span></code></dt><dd><p>archive et compresse en une comande (ici avec <code class="docutils literal notranslate"><span class="pre">gzip</span></code>)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-zxvf</span> <span class="pre">archive.tar.gz</span></code></dt><dd><p>décompresse et désarchive en une commande</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-jcvf</span> <span class="pre">tutoriels.tar.bz2</span> <span class="pre">tutoriels/</span></code></dt><dd><p>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-jxvf</span> <span class="pre">tutoriels.tar.bz2</span> <span class="pre">tutoriels/</span></code></dt><dd><p>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></p>
+</dd>
 </dl>
 <p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-jxvf</span> <span class="pre">tutoriels.tar.bz2</span> <span class="pre">tutoriels/</span></code></p>
 <blockquote>
-<div>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></div></blockquote>
+<div><p>idem avec <code class="docutils literal notranslate"><span class="pre">bzip2</span></code></p>
+</div></blockquote>
 </div>
 <div class="section" id="afficher-un-fichier-archive-sans-le-desarchiver">
 <h2>Afficher un fichier archivé sans le désarchiver<a class="headerlink" href="#afficher-un-fichier-archive-sans-le-desarchiver" title="Lien permanent vers ce titre">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">zcat</span></code>, <code class="docutils literal notranslate"><span class="pre">zmore</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">zless</span></code></p>
 <blockquote>
-<div>afficher directement un fichier compressé (fichier simple, pas archive)</div></blockquote>
+<div><p>afficher directement un fichier compressé (fichier simple, pas archive)</p>
+</div></blockquote>
 </div>
 <div class="section" id="fichiers-zip">
 <h2>Fichiers <code class="docutils literal notranslate"><span class="pre">.zip</span></code><a class="headerlink" href="#fichiers-zip" title="Lien permanent vers ce titre">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">unzip</span></code></p>
 <blockquote>
-<div>installer le décompresseur de zip</div></blockquote>
+<div><p>installer le décompresseur de zip</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">archive.zip</span></code></p>
 <blockquote>
-<div>décompresser un zip</div></blockquote>
+<div><p>décompresser un zip</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">-l</span> <span class="pre">fichier.zip</span></code></p>
 <blockquote>
-<div>afficher le contenu du fichier zip sans l’extraire</div></blockquote>
+<div><p>afficher le contenu du fichier zip sans l’extraire</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">zip</span></code></p>
 <blockquote>
-<div>installer le compresseur de zip</div></blockquote>
+<div><p>installer le compresseur de zip</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">zip</span> <span class="pre">-r</span> <span class="pre">tutoriels.zip</span> <span class="pre">tutoriels/</span></code></p>
 <blockquote>
-<div>Le -r demande à compresser tous les fichiers contenus dans le dossier tutoriels (sans ce paramètre, seul le dossier, vide, sera compressé !).</div></blockquote>
+<div><p>Le -r demande à compresser tous les fichiers contenus dans le dossier tutoriels (sans ce paramètre, seul le dossier, vide, sera compressé !).</p>
+</div></blockquote>
 </div>
 <div class="section" id="fichiers-rar">
 <h2>Fichiers <code class="docutils literal notranslate"><span class="pre">.rar</span></code><a class="headerlink" href="#fichiers-rar" title="Lien permanent vers ce titre">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">unrar</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">unrar</span> <span class="pre">e</span> <span class="pre">tutoriels.rar</span></code>
 `   Non, vous ne rêvez pas, l’auteur du programme ne veut pas que l’on mette un tiret devant l’option e ! Il faut bien qu’il y ait des exceptions dans la vie. :-)</p>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">unrar</span> <span class="pre">l</span> <span class="pre">tutoriels.rar</span></code></dt>
-<dd><p class="first">Pour lister le contenu avant décompression, utilisez l’option</p>
-<blockquote class="last">
-<div><strong>pas possible de créer des fichiers .rar (format propriétaire)</strong></div></blockquote>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">unrar</span> <span class="pre">l</span> <span class="pre">tutoriels.rar</span></code></dt><dd><p>Pour lister le contenu avant décompression, utilisez l’option</p>
+<blockquote>
+<div><p><strong>pas possible de créer des fichiers .rar (format propriétaire)</strong></p>
+</div></blockquote>
 </dd>
 </dl>
 </div>
@@ -175,6 +178,7 @@
 <li class="toctree-l1"><a class="reference internal" href="20-vim.html">VIM : éditeur de texte avancé</a></li>
 <li class="toctree-l1"><a class="reference internal" href="21-scripts-shell.html">Scripts Shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22-folders.html">System Folders in Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23-windows10.html">Linux in WIndows 10</a></li>
 </ul>
 
 <div class="relations">
@@ -187,13 +191,11 @@
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -214,7 +216,7 @@
       &copy;2018, Eric.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Manipuler les fichiers &#8212; Documentation Linux_OpenClassRoom </title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -13,8 +11,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Les flux de redirection" href="04-redirection.html" />
@@ -37,56 +35,53 @@
             
   <div class="section" id="manipuler-les-fichiers">
 <h1>Manipuler les fichiers<a class="headerlink" href="#manipuler-les-fichiers" title="Lien permanent vers ce titre">¶</a></h1>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">tree</span> <span class="pre">--du</span> <span class="pre">-h</span></code></dt>
-<dd><p class="first">returns a tree-like representation of the current folder and its subfilders/files (could be a huge dump)</p>
-<p class="last">Note that tree might have to be installed first with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">tree</span></code></p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">tree</span> <span class="pre">--du</span> <span class="pre">-h</span></code></dt><dd><p>returns a tree-like representation of the current folder and its subfilders/files (could be a huge dump)</p>
+<p>Note that tree might have to be installed first with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">tree</span></code></p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">-N</span> <span class="pre">fichier.txt</span></code></dt>
-<dd>affiche le contenu d’un fichier avec numéro de lignes</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">fichier.txt</span></code></dt>
-<dd>crée un fichier vide</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">head/tail</span></code></dt>
-<dd>affiche le début/fin d’un fichier</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tail</span> <span class="pre">-f</span> <span class="pre">fichier</span></code></dt>
-<dd>permet de voir l’évolution de la fin d’un fichier (par ex : var/log/syslog)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">.</span></code></dt>
-<dd>le dossier où je me trouve</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">dossierSource</span> <span class="pre">dossierDest</span></code></dt>
-<dd>Avec l’option <code class="docutils literal notranslate"><span class="pre">-R</span></code> (un « R » majuscule !), vous pouvez copier un dossier, ainsi que tous les sous-dossiers et fichiers qu’il contient !</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">mv</span></code></dt>
-<dd>déplacer</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">oldName</span> <span class="pre">newName</span></code></dt>
-<dd>Renommer un fichier</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">fichier</span></code></dt>
-<dd>suprimer</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-i</span> <span class="pre">fichier</span></code></dt>
-<dd>supprimer avec confirmation</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-f</span> <span class="pre">fichier</span></code></dt>
-<dd>forcer la suppression quoi qu’il arrive</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-v</span> <span class="pre">fichier</span></code></dt>
-<dd>supprimer avec verbose</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-</span> <span class="pre">r</span> <span class="pre">dossier/</span></code></dt>
-<dd>supprimer un dossier et son contenu</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">*</span></code></dt>
-<dd><p class="first">supprimer tous les fichiers du dossier courant</p>
-<p class="last">ATTENTION : NE SURTOUT PAS CONFONDRE AVEC <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">/*</span></code> qui supprime tout, partout et flingue tout le système</p>
+<dt><code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">-N</span> <span class="pre">fichier.txt</span></code></dt><dd><p>affiche le contenu d’un fichier avec numéro de lignes</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">fichier1</span> <span class="pre">fichier2</span></code></dt>
-<dd>crée un lien physique entre fichier1 et fichier2 (même «&nbsp;inode&nbsp;», pointent vers le même contenu)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">fichier1</span> <span class="pre">fichier2</span></code></dt>
-<dd>crée un lien symbolique entre fichier1 et fichier2 (~raccourci Windows)</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">nom_du_dossier</span></code></dt>
-<dd>créer un dossier</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">dossier/{dossier1,dossier2,dossier3}</span></code></dt>
-<dd><p class="first">crée l’arborescence suivante :</p>
+<dt><code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">fichier.txt</span></code></dt><dd><p>crée un fichier vide</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">head/tail</span></code></dt><dd><p>affiche le début/fin d’un fichier</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">tail</span> <span class="pre">-f</span> <span class="pre">fichier</span></code></dt><dd><p>permet de voir l’évolution de la fin d’un fichier (par ex : var/log/syslog)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">.</span></code></dt><dd><p>le dossier où je me trouve</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-R</span> <span class="pre">dossierSource</span> <span class="pre">dossierDest</span></code></dt><dd><p>Avec l’option <code class="docutils literal notranslate"><span class="pre">-R</span></code> (un « R » majuscule !), vous pouvez copier un dossier, ainsi que tous les sous-dossiers et fichiers qu’il contient !</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mv</span></code></dt><dd><p>déplacer</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">oldName</span> <span class="pre">newName</span></code></dt><dd><p>Renommer un fichier</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">fichier</span></code></dt><dd><p>suprimer</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-i</span> <span class="pre">fichier</span></code></dt><dd><p>supprimer avec confirmation</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-f</span> <span class="pre">fichier</span></code></dt><dd><p>forcer la suppression quoi qu’il arrive</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-v</span> <span class="pre">fichier</span></code></dt><dd><p>supprimer avec verbose</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-</span> <span class="pre">r</span> <span class="pre">dossier/</span></code></dt><dd><p>supprimer un dossier et son contenu</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">*</span></code></dt><dd><p>supprimer tous les fichiers du dossier courant</p>
+<p>ATTENTION : NE SURTOUT PAS CONFONDRE AVEC <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">/*</span></code> qui supprime tout, partout et flingue tout le système</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">fichier1</span> <span class="pre">fichier2</span></code></dt><dd><p>crée un lien physique entre fichier1 et fichier2 (même « inode », pointent vers le même contenu)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">fichier1</span> <span class="pre">fichier2</span></code></dt><dd><p>crée un lien symbolique entre fichier1 et fichier2 (~raccourci Windows)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">nom_du_dossier</span></code></dt><dd><p>créer un dossier</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">dossier/{dossier1,dossier2,dossier3}</span></code></dt><dd><p>crée l’arborescence suivante :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>├── <span class="o">[</span>eric     <span class="m">4</span>.0K<span class="o">]</span>  dossier
 │   ├── <span class="o">[</span>eric     <span class="m">4</span>.0K<span class="o">]</span>  dossier1
 │   ├── <span class="o">[</span>eric     <span class="m">4</span>.0K<span class="o">]</span>  dossier2
 │   └── <span class="o">[</span>eric     <span class="m">4</span>.0K<span class="o">]</span>  dossier3
 </pre></div>
 </div>
-<p class="last"><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--parents</span></code> : no error if existing, make parent directories as needed</p>
+<p><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--parents</span></code> : no error if existing, make parent directories as needed</p>
 </dd>
 </dl>
 </div>
@@ -131,6 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="20-vim.html">VIM : éditeur de texte avancé</a></li>
 <li class="toctree-l1"><a class="reference internal" href="21-scripts-shell.html">Scripts Shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22-folders.html">System Folders in Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23-windows10.html">Linux in WIndows 10</a></li>
 </ul>
 
 <div class="relations">
@@ -143,13 +139,11 @@
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -170,7 +164,7 @@
       &copy;2018, Eric.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>La connexion sécurisée à distance avec SSH &#8212; Documentation Linux_OpenClassRoom </title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -13,8 +11,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Transférer des fichiers" href="17-transferer-fichiers.html" />
@@ -38,13 +36,51 @@
   <div class="section" id="la-connexion-securisee-a-distance-avec-ssh">
 <h1>La connexion sécurisée à distance avec SSH<a class="headerlink" href="#la-connexion-securisee-a-distance-avec-ssh" title="Lien permanent vers ce titre">¶</a></h1>
 <ul class="simple">
-<li>Telnet : non sécurisé (non crypté)</li>
-<li>SSH : ~Telnet crypté</li>
+<li><p>Telnet : non sécurisé (non crypté)</p></li>
+<li><p>SSH : ~Telnet crypté</p></li>
 </ul>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">rico&#64;192.168.1.5</span></code></dt>
-<dd>se connecte en ssh au login <code class="docutils literal notranslate"><span class="pre">rico</span></code> et à la machine d’adresse ip <code class="docutils literal notranslate"><span class="pre">192.168.1.5</span></code></dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">rico&#64;192.168.1.5</span></code></dt><dd><p>se connecte en ssh au login <code class="docutils literal notranslate"><span class="pre">rico</span></code> et à la machine d’adresse ip <code class="docutils literal notranslate"><span class="pre">192.168.1.5</span></code></p>
+</dd>
 </dl>
+<div class="section" id="se-connecter-en-ssh-sans-mot-de-passe-avec-une-paire-cle-publique-privee-windows-10">
+<h2>Se connecter en SSH sans mot de passe avec une paire clé publique/privée (Windows 10)<a class="headerlink" href="#se-connecter-en-ssh-sans-mot-de-passe-avec-une-paire-cle-publique-privee-windows-10" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://blogs.endjin.com/2019/09/passwordless-ssh-from-windows-10-to-raspberry-pi/">https://blogs.endjin.com/2019/09/passwordless-ssh-from-windows-10-to-raspberry-pi/</a></p>
+<ol class="arabic">
+<li><p>Vérifier que le dossier <code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;name&gt;\.ssh</span></code> existe. Aller dans ce répertoire et créer une paire de clés. Il n’est pas nécessaire d’entrer une passphrase.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code></p>
+<p>Une clé publique (.pub) et une clé privés (sans extension) ont été créées.</p>
+</div></blockquote>
+</li>
+<li><p>Dans powershell, démarrer le service <code class="docutils literal notranslate"><span class="pre">ssh-agent</span></code> :</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Set-Service</span> <span class="pre">ssh-agent</span> <span class="pre">-StartupType</span> <span class="pre">Automatic</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Start-Service</span> <span class="pre">ssh-agent</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Charger la clé dans <code class="docutils literal notranslate"><span class="pre">ssh-agent</span></code></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">ssh-add</span> <span class="pre">C:\Users\&lt;name&gt;\.ssh\id_rsa</span></code> (remplacer « id_rsa » par le nom du fichier créé avec <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code>)</p>
+</div></blockquote>
+</li>
+<li><p>Copier la clé publique vers la machine Linux</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">id_rsa.pub</span> <span class="pre">pi&#64;192.168.1.5:~/</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Sur la machine Linux, ajouter le contenu de la clé publique dans le fichier <code class="docutils literal notranslate"><span class="pre">.ssh/authorized_keys</span></code> (s’il n’existe pas il sera créé)</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">id_rsa.pub</span> <span class="pre">&gt;&gt;</span> <span class="pre">.ssh/authorized_keys</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Modifier les droits de <code class="docutils literal notranslate"><span class="pre">.ssh/authorized_keys</span></code> (ne semble pas indispensable)</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">600</span> <span class="pre">.ssh/authorized_keys</span></code></p>
+</div></blockquote>
+</li>
+</ol>
+</div>
 </div>
 
 
@@ -87,6 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="20-vim.html">VIM : éditeur de texte avancé</a></li>
 <li class="toctree-l1"><a class="reference internal" href="21-scripts-shell.html">Scripts Shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22-folders.html">System Folders in Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23-windows10.html">Linux in WIndows 10</a></li>
 </ul>
 
 <div class="relations">
@@ -99,13 +136,11 @@
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -126,7 +161,7 @@
       &copy;2018, Eric.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
